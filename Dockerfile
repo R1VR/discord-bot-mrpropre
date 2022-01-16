@@ -13,7 +13,7 @@ RUN apk add --no-cache \
     openssh \
     openssl \
     openssl-dev \
-    pip3 install --upgrade pip && \
-    pip3 --no-cache-dir install -r /root/requirements/requirements.txt
+    pip install --upgrade pip && \
+    pip --no-cache-dir install -r /root/requirements/requirements.txt
 
 CMD [ "sh", "init" ]
