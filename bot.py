@@ -1,4 +1,15 @@
 import discord
+import yaml
+
+with open('vars.yml') as file:
+    try:
+        yml_file = yaml.safe_load(file)   
+        print(yml_file)
+    except yaml.YAMLError as exc:
+        print(exc)
+
+token = yml_file['token']
+print(token)
 
 client = discord.Client()
 
@@ -16,9 +27,4 @@ async def on_message(message):
         await message.channel.send('Hello!')
 
 client.run('your token here')
-
-
-
-
-
 
