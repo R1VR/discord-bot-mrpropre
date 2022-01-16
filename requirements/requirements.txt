@@ -1,0 +1,3 @@
+discord==latest
+paramiko==latest
+requests==latest
